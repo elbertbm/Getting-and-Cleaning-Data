@@ -1,10 +1,8 @@
 library(sqldf)
 ##read dataset,label,variable names 
 train<-read.table("./UCI HAR Dataset/train/X_train.txt")
-trainlabel<-read.table("./UCI HAR Dataset/train/Y_train.txt")
 features<-read.table("./UCI HAR Dataset/features.txt")
 test<-read.table("./UCI HAR Dataset/test/X_test.txt")
-testlabel<-read.table("./UCI HAR Dataset/test/Y_test.txt")
 ##merge train and test dataset with variable names
 total<-rbind(test,train)
 colnames(total)<-features[,2]
