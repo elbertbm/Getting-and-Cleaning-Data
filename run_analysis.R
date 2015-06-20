@@ -8,7 +8,7 @@ total<-rbind(test,train)
 colnames(total)<-features[,2]
 ##select column with mean and std
 partname<-sqldf("select V2 from features where (V2 like '%mean()%' or V2 like '%std()%') ")
-partname1<-partname[,1]
+partname1<-as.vector(partname[,1])
 part<-subset(total,select=partname1)
 ##create table with mean of each variable selected
 partmean<-sapply(part,mean)
