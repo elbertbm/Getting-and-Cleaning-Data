@@ -1,5 +1,5 @@
 library(sqldf)
-##read dataset,label,variable names 
+##read dataset,variable names 
 train<-read.table("./UCI HAR Dataset/train/X_train.txt")
 features<-read.table("./UCI HAR Dataset/features.txt")
 test<-read.table("./UCI HAR Dataset/test/X_test.txt")
